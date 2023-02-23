@@ -11,14 +11,16 @@ body {
 header {
     width: 100%;
     height: 10vh;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
 }
 
 .menu {
-    margin-top: 3vh;
+    margin-top: 2.5vh;
     float: right;
     margin-right: 5%;
-    height: 4vh;
+    height: 5vh;
 }
 
 .menu > li {
@@ -31,8 +33,50 @@ header {
     color: white;
     border: none;
     width: 8vw;
-    height: 4vh;
+    height: 5vh;
     font-size: 2vh;
     border-radius: 10px;
     margin-left: 3vw;
+}
+
+.ND {
+    margin-top: 15%;
+    width: 100%;
+}
+
+.divND {
+    width: 40%;
+    margin-left: 5%;
+    display: inline-block;
+}
+
+.titolo {
+    margin-left: 20%;
+    font-size: 7vh;
+    color:rgb(0, 180, 0);
+    font-weight: 900;
+}
+
+.descrizione {
+    margin-left: 20%;
+    margin-top: 5%;
+    font-size: 3vh;
+}
+
+#aggiungiRecensione {
+    width: 10vw;
+    height: 5vh;
+    color: white;
+    background-color: rgb(0, 180, 0);
+    border: none;
+    font-size: 2vh;
+    border-radius: 10px;
+    margin-top: 8%;
+    margin-left: 20%;
+}
+
+.ND > img {
+    display: inline-block;
+    margin-left: 10%;
+    width: 30%;
 }
