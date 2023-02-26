@@ -299,6 +299,10 @@ function onPlayerReady(event) {
 function interrompiRiproduzione() {
     if(player != null)
         player.stopVideo()
+
+    for(j = 0; j < bottoniCanzoni.length; j++) {
+        bottoniCanzoni[j].style.backgroundColor = "transparent"
+    }
 }
 //modifica il volume, viene richiamata con "onchange" dal file html
 function modificaVolume() {
