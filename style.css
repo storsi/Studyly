@@ -1,82 +1,291 @@
+/*GENERALE*/
+
 * {
     margin: 0;
     padding: 0;
 }
 
+*:focus {
+    outline: none;
+}
+
 body {
-    color: white;
     background-color: rgb(62, 62, 62);
+    user-select: none;
 }
 
-header {
-    width: 100%;
-    height: 10vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    position: fixed;
-    top: 0;
+hr {
+    border: 1px solid;
+    margin: 10% 15% 10% 15%;
 }
 
-.menu {
-    margin-top: 2.5vh;
-    float: right;
-    margin-right: 5%;
-    height: 5vh;
+/*SCROLLBAR*/
+
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-.menu > li {
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(125, 125, 125, 0.405);
+}
+
+::-webkit-scrollbar-thumb {
+    background: black; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-button {}
+
+/*UTILITÀ*/
+/*Generale:*/
+.uti {
+    width: 20%;
+    height: 6vh;
+    background-color: orange;
+    position: absolute;
+    top: 3%;
+    border-radius: 20px;
+    transition: .7s;
+    overflow: hidden;
+}
+
+.scritte {
+    width: 80%;
+    height: 6vh;
+}
+
+#studioP, #riproduzione, #studia {
+    font-size: 4vh;
+    position: absolute;
+    top: 1vh;
+    left: 25%;
     display: inline-block;
+}
+
+.modUtilita {
+    position: absolute;
+    top: .5vh;
+    right: 4%;
+    width: 12.5%;
+    height: 5vh;
+    border-radius: 50%;
+    border: none;
     font-size: 2.5vh;
+    background-color: transparent;
+    transform: rotate(90deg);
+    cursor: pointer;
+    transition: .7s;
 }
 
-.menu > li > button {
-    background-color: rgb(0, 180, 0);
-    color: white;
-    border: none;
-    width: 8vw;
-    height: 5vh;
+.spiegazione {
+    text-align: center;
     font-size: 2vh;
-    border-radius: 10px;
-    margin-left: 3vw;
+    margin-bottom: 15%;
 }
 
-.ND {
-    margin-top: 15%;
-    width: 100%;
+#tempiLi, .canzone, #materia {
+    width: 80%;
+    list-style: none;
+    border: 2px solid black;
+    height: 5.5vh;
+    margin: 5% 10% 5% 10%;
+    font-size: 2.3vh;
+    cursor: pointer;
+} 
+
+.modUtilita:hover {
+    background-color: rgb(255, 201, 101);
 }
 
-.divND {
-    width: 40%;
+/*Musica*/
+
+#musica {
+    left: 10%;
+}
+
+.gestioneCanzoni {
+    margin-bottom: 15%;
+}
+
+.gestioneCanzoni > div {
+    display: inline-block;
+}
+
+.canzone {
+    height: auto;
+}
+
+.shuffle {
+    margin-top: 2%;
+    width: 28%;
+    height: 3vh;
+    font-size: 2vh;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#volume {
+    font-size: 2vh;
+}
+
+.canzone:hover, .shuffle:hover {
+    background-color: rgb(255, 201, 101);
+}
+
+/*Tempo*/
+
+#tempo {
+    left: 40%;
+    overflow: hidden;
+}
+
+#fase {
+    position: absolute;
+    top: 2vh;
+    left: 5%;
+    font-size: 2vh;
+    display: inline-block;
+}
+
+#cambiaTempo > div {
+    display: inline-block;
+    width: 15%;
     margin-left: 5%;
-    display: inline-block;
-}
-
-.titolo {
-    margin-left: 20%;
-    font-size: 7vh;
-    color:rgb(0, 180, 0);
-    font-weight: 900;
-}
-
-.descrizione {
-    margin-left: 20%;
-    margin-top: 5%;
-    font-size: 3vh;
-}
-
-#aggiungiRecensione {
-    width: 10vw;
-    height: 5vh;
-    color: white;
-    background-color: rgb(0, 180, 0);
-    border: none;
-    font-size: 2vh;
-    border-radius: 10px;
     margin-top: 8%;
-    margin-left: 20%;
 }
 
-.ND > img {
+#cambiaTempo > div > input, #volume {
+    width: 100%;
+    height: 3vh;
+    font-size: 2vh;
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+#inizia {
+    width: 25%;
+    height: 3.5vh;
+    font-size: 2vh;
+    background-color: transparent;
+    border: 2px solid black;
+    margin-left: 5%;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+#sceltePreimpostate {
+    text-align: center;
+}
+
+#inizia:hover, #sceltePreimpostate > li:hover {
+    background-color: rgb(255, 201, 101);
+}
+/*Studio*/
+
+#studio {
+    right: 10%;
+}
+
+#materia {
+    text-align: center;
+}
+
+#materia:hover {
+    background-color: rgb(255, 201, 101);
+}
+
+/*PLAYER*/
+
+/*TAVOLO DA LAVORO*/
+
+#tavoloDaLavoro {
+    width: 75%;
+    margin-left: 12.5%;
+    height: 70vh;
+    background-color: rgb(199, 199, 199);
+    margin-top: 10%;
+    border-radius: 20px;
+    overflow: auto;
+}
+
+/*AGGIUNTA FILE*/
+
+.aggiungiFile {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(0, 195, 255);
+    font-size: 4vh;
+    position: absolute;
+    left: 4.25%;
+    bottom: 3%;
+    cursor: pointer;
+}
+
+.aggiungiFile:hover {
+    background-color: rgb(84, 215, 255);
+}
+
+#tipoFile {
+    position: absolute;
+    bottom: 13%;
+    left: 1.25%;
+    width: 10%;
+    background-color: white;
+    transition: .7s;
+    height: 0;
+    overflow: hidden;
+}
+
+/*FILE*/
+
+#nomeFile {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-right: 5%;
+    height: 3vh;
+    font-size: 2vh;
+}
+
+.aggiungi {
+    width: 92%;
+    margin: 0 5% 1vh 5%;
+    height: 3vh;
+}
+
+.file {
+    width: 9.8%;
+    height: auto;
+    border-radius: 10px;
+    background-color: transparent;
+    color: black;
+    margin: 2%;
     display: inline-block;
-    margin-left: 10%;
-    width: 30%;
+}
+
+.file > img {
+    width: 80%;
+    margin: 10%
+}
+
+.file > p {
+    font-size: 2vh;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.file:hover {
+    background-color: rgba(0, 208, 255, 0.2);
+}
+
+.duplicaFile, .eliminaFile {
+    width: 38%;
+    margin: 5%;
+    height: 2vh;
+    background-color: transparent;
+    border: 1px solid black;
 }

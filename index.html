@@ -8,24 +8,111 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <ul class = menu>
-            <li>Recensioni</li>
-            <li><button>Log In</button></li>
-        </ul>
-    </header>
-    <div class="ND">
-        <div class="divND">
-            <p class="titolo">TITOLO</p>
-            <p class="descrizione">Numero uno tra i siti di recensioni, 
-                qui troverai tutto ciò che stai cercando con un layout e una chiarezza mai visti prima!
-            </p>
-            <button id="aggiungiRecensione">Inizia subito!</button>
+    <!--Il player che permette di sentire la musica-->
+    <div id="player"></div>
+
+    <!--Le utilità sono i tre rettangoli arancioni in alto-->
+    <div class="utilita">
+
+        <!--Utilità della musica: quello a sinistra-->
+        <div id="musica" class="uti">
+            <!--La sezione con scritto "Musica:", è sempre visibile-->
+            <div class="scritte">
+                <p id="riproduzione">MUSICA:</p>
+            </div>
+
+            <!--Il pulsante per "aprire" o "chiudere" l'utilità-->
+            <button class="modUtilita">&gt</button>
+
+            <!--Ciò che compare "aprendo" l'utilità-->
+            <div id="cambiaMusica" style="text-align: center;position: relative;">
+                <hr>
+                <p class="spiegazione" style="margin-bottom: 5%;">Musica</p>
+
+                <!--I pulsanti per estrarre casualmente una canzone, modificare il volume o interrompre una canzone-->
+                <div class="gestioneCanzoni">
+                    <button class="shuffle" onclick="estraiCanzone()">Casuale</button>
+                    <input type="number"id="volume" style="width: 15%; display: inline-block" value="20" max="100" min="0" onchange="modificaVolume()">
+                    <button class="shuffle" style="left: 10%" onclick="interrompiRiproduzione()">Interrompi</button>
+                </div>
+
+                <!--Elenco canzoni finite (non LIVE)-->
+                <ul id="canzoniFinite"></ul>
+                <hr>
+                <p class="spiegazione">Live</p>
+                <!--Elenco canzoni LIVE-->
+                <ul id="canzoniLive"></ul>
+            </div>
         </div>
-        <img src="https://media.sproutsocial.com/uploads/2019/08/online-reviews-management.svg">
+
+        <!--Utilità del timer: quello in centro-->
+        <div id="tempo" class="uti">
+
+            <!--Scritte sempre visibili-->
+            <div class="scritte">
+                <!--Indica se è tempo del lavoro o del riposo-->
+                <p id="fase"></p>
+                <!--Indica quanto manca allo scadere del tempo e se è stata completata la sessione-->
+                <p id="studioP">TIMER:</p>
+            </div>
+            <!--Pulsante per "aprire" e "chiudere" l'utilità-->
+            <button class="modUtilita">&gt</button>
+            <hr>
+            <p class="spiegazione" style="margin-bottom: 0;">Inserisci manualmente</p>
+
+            <!--Ciò che compare "aprendo" l'utilità-->
+            <div id="cambiaTempo">
+                <!--Input per inserire i minuti di lavoro, i minuti di riposo e le ripetizioni da fare-->
+                <div>
+                    <p>Min. lavoro:</p>
+                    <input type="number" id="minStudio" value="0" step="10">
+                </div>
+                <div>
+                    <p>Min. pausa:</p>
+                    <input type="number" id="minRiposo" value="0" step="5">
+                </div>
+                <div>
+                    <p>Num. periodi:</p>
+                    <input type="number" id="ripetizioni" value="0" max="9" min="0">
+                </div>
+                <button id="inizia" onclick="avviaTempo()">Avvia!</button><br>
+
+                <hr>
+                <p class="spiegazione">Seleziona tra le preimpostate</p>
+                
+                <!--Elenco delle scelte per il timer preimpostate-->
+                <ul id="sceltePreimpostate"></ul>
+            </div>
+        </div>
+
+        <!--Utilità dello studio: quello a destra-->
+        <div id="studio" class="uti">
+            <!--Scritta sempre visibile-->
+            <div class="scritte">
+                <p id="studia">STUDIA:</p>
+            </div>
+            <!--Pulsante per "aprire" e "chiudere" l'utilità-->
+            <button class="modUtilita">&gt</button>
+
+            <!--Ciò che compare "aprendo l'utilità"-->
+            <div id="cambiaStudio">
+                <!--Elenco delle materie (al momento non fanno nulla)-->
+                <ul id="materie"></ul>
+            </div>
+        </div>
     </div>
-    <div id="ultimeRecensioni">
-        
+
+    <!--Il tavolo da lavoro è dove appariranno i file creati-->
+    <div id="tavoloDaLavoro"></div>
+    <!--Ciò che appare al premere del pulsante per l'aggiunta di un file-->
+    <div id="tipoFile">
+        <input type="text" id="nomeFile" placeholder="Inserisci il nome">
+        <button class="aggiungi" onclick="aggiungiFile()">Aggiungi</button>
     </div>
+    <!--Pulsante per l'aggiunta di un file-->
+    <button class="aggiungiFile" onclick="creaFileBtnPremuto()">+</button>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
 </body>
 </html>

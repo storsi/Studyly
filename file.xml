@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+    <tecniche>
+        <tecnica minLavoro="25" minRiposo="05" numRipetizioni="4">Pomodoro</tecnica>
+        <tecnica minLavoro="50" minRiposo="10" numRipetizioni="4">Pomodoro avanzato</tecnica>
+        <tecnica minLavoro="52" minRiposo="17" numRipetizioni="4">"52 - 17"</tecnica>
+    </tecniche>
+    <timer>
+        <tempo>0</tempo><!--secondi lavoro-->
+        <tempo>0</tempo><!--secondi riposo-->
+        <tempo>a</tempo><!--fase-->
+        <tempo>0</tempo><!--ripetizioni rimanenti-->
+    </timer>
+    <musica>
+        <canzoneLive v="jfKfPfyJRdk">Lofi hip hop radio</canzoneLive>
+        <canzoneLive v="nxl6OrS-j7g">Calm Music for Studying,Working</canzoneLive>
+        <canzoneLive v="-NfXRaCAtNs">Musica Deep Focus</canzoneLive>
+        <canzoneLive v="laKM6NOrdbA">Musica ambientale per studio, concentrazione</canzoneLive>
+        <canzoneFinita v="aFxmzxIUsFo" durata="1:20:00">A Classical Music Study playlist for Concentration and Focus</canzoneFinita>
+        <canzoneFinita v="OC4k7VtZxus" durata="3:36:58">Jazz Music For Relaxing, Studying and Working</canzoneFinita>
+        <canzoneFinita v="ceGLEhahLKQ" durata="4:14:39">Deep Focus Music</canzoneFinita>
+        <canzoneFinita v="gtmzPUmq7XU" durata="3:46:46">Ambient Study Music to Concentrate</canzoneFinita>
+        <canzoneFinita v="YATal4TlK6Y" durata="3:48:26">Musica rilassante che guarisce stress e ansia</canzoneFinita>
+        <canzoneFinita v="qLlrSwEhIkw" durata="49:22">beats to relax / study / work</canzoneFinita>
+    </musica>
+    <studia>
+        <materia>Matematica</materia>
+        <materia>Italiano</materia>
+        <materia>Storia</materia>
+        <materia>Informatica</materia>
+        <materia>Tps</materia>
+        <materia>Sistemi</materia>
+        <materia>GPOI</materia>
+        <materia>Inglese</materia>
+    </studia>
+    <files></files>
+</info>
