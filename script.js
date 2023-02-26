@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //Funzione richiamata per "aprire" o "chiudere" l'utilità
 function apriChiudiUtilita(pulsante, div) {
     fase.innerText = ""
+    div.scrollTop = "0"
     if(div.offsetHeight <= 65) {
         //Apre
         pulsante.style.rotate = -180 + "deg"
@@ -365,4 +366,3 @@ function eliminaFile(i) {
 
     inserisciFile()
 }
-
